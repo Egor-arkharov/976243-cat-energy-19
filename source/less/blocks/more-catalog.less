@@ -1,0 +1,36 @@
+.more-catalog {
+  padding-top: 83px;
+  text-align: center;
+  margin: 0 20px 25px;
+
+  & b {
+    .alt-title();
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url("../../img/icon-plus-mobile.svg");
+      position: absolute;
+      width: 31px;
+      height: 31px;
+      top: -(25px + 31 / 2);
+      left: 145px - 20 - 31;
+    }
+  }
+
+  & p {
+    .alt-text();
+    margin-top: 11px;
+    margin-bottom: 22px;
+  }
+
+  &__button {
+    display: block;
+    min-height: 40px;
+    background-color: #f2f2f2;
+    .alt-title();
+    color: #444444;
+    text-align: center;
+    padding-top: 13px;
+  }
+}
