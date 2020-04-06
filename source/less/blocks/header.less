@@ -1,18 +1,16 @@
 .header {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 320px;
+  flex-wrap: wrap;
+
   padding: 0 20px;
+}
 
-  &__nav {
-    display: none;
-  }
-
-  &__toggle-nav {
-    background: url("../../img/icon-mobile-menu.svg") no-repeat center;
-    align-self: stretch;
-    border: none;
-    outline: none;
-  }
+.header__toggle-nav {
+  background-color: @body-color;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
 }

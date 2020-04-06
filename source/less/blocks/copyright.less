@@ -1,17 +1,14 @@
 .copyright__logo {
   .link();
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  &-text {
-    font-family: "arial", serif;
-    font-size: 16px;
-    line-height: 16px;
-    color: @color-text;
-  }
+.copyright__logo-text {
+  .link-text();
 
-  &-image path {
-    fill: #666666;
-  }
+  font-family: @alt-font;
+  color: @text-color;
 }

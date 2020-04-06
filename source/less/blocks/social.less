@@ -1,59 +1,57 @@
-.social {
-  &__list {
-    .list();
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    margin-top: 56px;
-    margin-bottom: 44px;
+.social__list {
+  .list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  margin-top: 56px;
+  margin-bottom: 44px;
 
-    &::before {
-      content: "";
-      width: 280px;
-      height: 1px;
-      position: absolute;
-      background-color: #f2f2f2;
-      top: -20px;
-      left: 0;
-    }
-
-    &::after {
-      content: "";
-      width: 280px;
-      height: 1px;
-      position: absolute;
-      background-color: #f2f2f2;
-      top: 20px;
-      left: 0;
-    }
+  &::before {
+    content: "";
+    width: 280px;
+    height: 1px;
+    position: absolute;
+    background-color: @content-color;
+    top: -20px;
+    left: 0;
   }
 
-  &__link {
-    .link();
-    display: block;
-    background-position: center;
-    background-repeat: no-repeat;
+  &::after {
+    content: "";
+    width: 280px;
+    height: 1px;
+    position: absolute;
+    background-color: @content-color;
+    top: 20px;
+    left: 0;
+  }
+}
 
-    &--vkontakte {
-      background-image: url("../../img/icon-vk.svg");
-      margin-left: 93px - 20;
-      width: 22px;
-      height: 12px;
-    }
+.social__link {
+  .link();
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    &--instagram {
-      background-image: url("../../img/icon-insta.svg");
-      width: 17px;
-      height: 17px;
-    }
+  &--vkontakte {
+    background-image: url("../img/icon-vk.svg");
+    margin-left: 93px - 20;
+    width: 22px;
+    height: 12px;
+  }
 
-    &--facebook {
-      background-image: url("../../img/icon-fb.svg");
-      margin-right: 102px - 20;
-      width: 10px;
-      height: 19px;
-    }
+  &--instagram {
+    background-image: url("../img/icon-insta.svg");
+    width: 17px;
+    height: 17px;
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-fb.svg");
+    margin-right: 102px - 20;
+    width: 10px;
+    height: 19px;
   }
 }

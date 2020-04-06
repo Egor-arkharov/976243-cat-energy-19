@@ -1,0 +1,21 @@
+.site-list {
+  .list();
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.site-list__item {
+  border-top: @border;
+  padding-top: 24px;
+  min-height: 65px;
+}
+
+.site-list__link {
+  .link();
+  .link-nav();
+
+  color: @link-color;
+}

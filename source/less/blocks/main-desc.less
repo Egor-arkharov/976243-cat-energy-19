@@ -1,22 +1,21 @@
 .main-desc {
-  background-image: url("../../img/index-can-mobile@1x.png"), url("../../img/index-background-mobile@1x.jpg");
+  // background-color: lighten(@brand-color, 10%), @body-color;
+  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 176px, top;
-  object-fit: cover;
-  color: #ffffff;
+  color: @body-color;
+}
 
-  &__text {
-    padding: 29px 35px 167px;
-  }
+.main-desc__text {
+  padding: 29px 35px 167px;
+}
 
-  &__title {
-    .main-title();
-    line-height: 36px;
-  }
+.main-desc__title {
+  .desc-title();
+}
 
-  &__button {
-    .button();
-    margin: 135px 20px 22px;
-    padding: 14px 0 11px;
-  }
+.main-desc__button {
+  .button();
+  margin: 135px 20px 22px;
+  padding: 14px 0 11px;
 }
