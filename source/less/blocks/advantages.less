@@ -1,0 +1,75 @@
+.advantages {
+  text-align: left;
+  margin: 0 20px;
+}
+
+.advantages__list {
+  .list-reset();
+}
+
+.advantages__item {
+  margin-bottom: 20px;
+  background-color: @content-color;
+}
+
+.advantages__title {
+  .medium-title();
+  font-weight: @font-normal;
+
+  position: relative;
+  padding-top: 39px;
+  padding-left: 92px;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 51px;
+    border-radius: 50%;
+
+    background-color: @brand-color;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    top: 30px;
+    left: 22px;
+  }
+
+  &--slim::before {
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--pro::before {
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+}
+
+.advantages__text {
+  .text();
+  padding-left: 21px;
+}
+
+.advantages__catalog {
+  margin: 0 22px;
+  padding: 20px 0 22px;
+  border-top: @border;
+}
+
+.advantages__link {
+  .link();
+  .same-fs-lh(16px);
+  font-weight: @font-bold;
+
+  position: relative;
+  color: @link-color;
+
+  &::after {
+    content: "";
+    background: url("../img/icon-right-arrow-long.svg") no-repeat;
+    position: absolute;
+    top: 8px;
+    left: 100px;
+    width: 25px;
+    height: 12px;
+  }
+}
