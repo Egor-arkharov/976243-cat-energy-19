@@ -4,7 +4,7 @@
 }
 
 .advantages__list {
-  .list();
+  .list-reset();
 }
 
 .advantages__item {
@@ -13,7 +13,8 @@
 }
 
 .advantages__title {
-  .advantages-title();
+  .medium-title();
+  font-weight: @font-normal;
 
   position: relative;
   padding-top: 39px;
@@ -26,7 +27,6 @@
     border-radius: 50%;
 
     background-color: @brand-color;
-    background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
     background-position: center;
 
@@ -34,10 +34,14 @@
     top: 30px;
     left: 22px;
   }
-}
 
-.advantages__item--pro .advantages__title::before {
-  background-image: url("../img/icon-cat-pro.svg");
+  &--slim::before {
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--pro::before {
+    background-image: url("../img/icon-cat-pro.svg");
+  }
 }
 
 .advantages__text {
@@ -53,11 +57,11 @@
 
 .advantages__link {
   .link();
-  .link-text();
+  .same-fs-lh(16px);
+  font-weight: @font-bold;
 
   position: relative;
   color: @link-color;
-  text-transform: uppercase;
 
   &::after {
     content: "";

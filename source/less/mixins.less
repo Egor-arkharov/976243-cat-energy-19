@@ -1,17 +1,22 @@
+.marg-padd-reset() {
+  margin: 0;
+  padding: 0;
+}
+
 .button() {
   display: block;
 
   width: 280px;
   min-height: 40px;
 
-  font-size: 14px;
-  line-height: 18px;
+  font-size: @text-fs;
+  line-height: @text-lh;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
 
   background-color: @brand-color;
-  color: #ffffff;
+  color: @body-color;
 
   cursor: pointer;
 }
@@ -20,72 +25,58 @@
   text-decoration: none;
 }
 
-.list() {
-  margin: 0;
-  padding: 0;
+.list-reset() {
+  .marg-padd-reset();
   list-style: none;
 }
 
 .main-title() {
-  font-size: 36px;
-  line-height: 60px;
-  font-weight: normal;
+  .marg-padd-reset();
 
-  margin: 0;
-  padding: 0;
+  font-size: @heading-h-fs;
+  line-height: @heading-h-lh;
+  font-weight: @font-normal;
 }
 
-.desc-title() {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: normal;
+.medium-title() {
+  .marg-padd-reset();
 
-  margin: 0;
-  padding: 0;
+  font-size: @heading-m-fs;
+  line-height: @heading-m-lh;
+  font-weight: @font-bold;
+  text-transform: uppercase;
 }
 
-.alt-title() {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: normal;
+.low-title() {
+  .marg-padd-reset();
+
+  font-size: @heading-l-fs;
+  line-height: @heading-l-lh;
+  font-weight: @font-normal;
 
   text-transform: uppercase;
   text-align: left;
 
-  margin: 0;
-  padding: 0;
-
   color: @link-color;
 }
 
+.same-fs-lh(@px) {
+  .marg-padd-reset();
+
+  font-size: @px;
+  line-height: @px;
+  font-weight: @font-normal;
+  text-transform: uppercase;
+}
+
 .text() {
-  font-family: "Arial", serif;
-  font-size: 14px;
-  line-height: 18px;
+  font-family: @alt-font;
+  font-size: @text-fs;
+  line-height: @text-lh;
 }
 
 .alt-text() {
-  font-family: "Arial", serif;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.advantages-title() {
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-.link-nav() {
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: bold;
-
-  text-transform: uppercase;
-}
-
-.link-text() {
-  font-size: 16px;
-  line-height: 16px;
+  font-family: @alt-font;
+  font-size: @text-l-fs;
+  line-height: @text-l-lh;
 }

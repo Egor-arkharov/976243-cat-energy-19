@@ -1,17 +1,37 @@
-.main-desc {
-  // background-color: lighten(@brand-color, 10%), @body-color;
-  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 50% 176px, top;
-  color: @body-color;
-}
-
 .main-desc__text {
   padding: 29px 35px 167px;
+  position: relative;
+
+  background-color: lighten(@brand-color, 10%);
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+
+  color: @body-color;
+
+  height: 305px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 270px;
+    left: 20px;
+    top: 168px;
+  }
 }
 
 .main-desc__title {
-  .desc-title();
+  .same-fs-lh(36px);
+  text-transform: none;
+}
+
+.main-desc__slogan {
+  .same-fs-lh(14px);
+  margin-top: 19px;
 }
 
 .main-desc__button {

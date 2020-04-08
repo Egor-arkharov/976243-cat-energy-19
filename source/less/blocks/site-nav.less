@@ -1,21 +1,24 @@
-.site-list {
-  .list();
+.site-nav {
+  width: 100%;
+}
+
+.site-nav__list {
+  .list-reset();
 
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  min-width: 320px;
 }
 
-.site-list__item {
+.site-nav__item {
   border-top: @border;
   padding-top: 24px;
   min-height: 65px;
 }
 
-.site-list__link {
+.site-nav__link {
   .link();
-  .link-nav();
-
+  .same-fs-lh(20px);
+  font-weight: @font-bold;
   color: @link-color;
 }

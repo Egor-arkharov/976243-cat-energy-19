@@ -7,15 +7,13 @@
 </head>
 <body>
   <header class="header">
-    <a href="#" class="header__logo">
-      <img class="header__logo-image" src="img/logo-mobile.svg" alt="Логотип Cat Energy" width="191" height="39">
-    </a>
+    <a href="#" class="header__logo" aria-label="Логотип Cat Energy"></a>
     <button class="header__toggle-nav" type="button" aria-label="Открыть меню"></button>
-    <nav class="header__nav main-nav">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active"><a class="site-list__link">Главная</a></li>
-        <li class="site-list__item"><a href="catalog.html" class="site-list__link">Каталог продукции</a></li>
-        <li class="site-list__item"><a href="form.html" class="site-list__link">Подбор программы</a></li>
+    <nav class="header__nav site-nav">
+      <ul class="site-nav__list">
+        <li class="site-nav__item site-nav__item--active"><a class="site-nav__link">Главная</a></li>
+        <li class="site-nav__item"><a href="catalog.html" class="site-nav__link">Каталог продукции</a></li>
+        <li class="site-nav__item"><a href="form.html" class="site-nav__link">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
@@ -34,15 +32,15 @@
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества корма Cat Energy</h2>
       <ul class="advantages__list">
-        <li class="advantages__item advantages__item--slim">
-          <h3 class="advantages__title">Похудение</h3>
+        <li class="advantages__item">
+          <h3 class="advantages__title advantages__title--slim">Похудение</h3>
           <p class="advantages__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <div class="advantages__catalog">
             <a href="#" class="advantages__link">Каталог Slim</a>
           </div>
         </li>
-        <li class="advantages__item advantages__item--pro">
-            <h3 class="advantages__title">Набор массы</h3>
+        <li class="advantages__item">
+            <h3 class="advantages__title advantages__title--pro">Набор массы</h3>
             <p class="advantages__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <div class="advantages__catalog">
               <a href="#" class="advantages__link link">Каталог Pro</a>
