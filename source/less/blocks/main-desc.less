@@ -2,10 +2,11 @@
   padding: 29px 35px 167px;
   position: relative;
 
-  background-color: lighten(@brand-color, 10%);
+  background-color: @brand-color;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
+  background-size: cover;
 
   color: @body-color;
 
@@ -14,11 +15,14 @@
   &::after {
     content: "";
     position: absolute;
+
     background-image: url("../img/index-can-mobile@1x.png");
     background-position: center;
     background-repeat: no-repeat;
+
     width: 280px;
     height: 270px;
+
     left: 20px;
     top: 168px;
   }
@@ -26,16 +30,112 @@
 
 .main-desc__title {
   .same-fs-lh(36px);
+
   text-transform: none;
 }
 
 .main-desc__slogan {
   .same-fs-lh(14px);
+
   margin-top: 19px;
 }
 
 .main-desc__button {
   .button();
+
   margin: 135px 20px 22px;
   padding: 14px 0 11px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-desc__wrapper {
+    position: relative;
+
+    margin: 0 auto;
+    height: 867px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+
+      width: 709px;
+      height: 609px;
+
+      left: 0;
+      top: 75px + 122px;
+    }
+  }
+
+  .main-desc__text {
+    height: auto;
+
+    margin: 0;
+    padding: 61px 450px 0 40px;
+
+    background: none;
+    text-align: left;
+    color: @link-color;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .main-desc__button {
+    width: 245px;
+    margin: 48px 40px 0;
+    z-index: 100;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-desc {
+    margin-top: -60px;
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: right 0;
+  }
+
+  .main-desc__wrapper {
+    height: 696px;
+    margin-left: 193px;
+    padding-top: 226px;
+
+    &::after {
+      background-image: url("../img/index-can-desktop@1x.png");
+
+      width: 552px;
+      height: 499px;
+
+      top: 142px;
+      left: 35%;
+    }
+  }
+
+  .main-desc__text {
+    padding: 0;
+
+    width: 720px;
+    height: 200px;
+  }
+
+  .main-desc__title {
+    .same-fs-lh(60px);
+    width: 450px;
+    text-transform: none;
+  }
+
+  .main-desc__slogan {
+    .same-fs-lh(20px);
+    margin-top: 33px;
+  }
+
+  .main-desc__button {
+    margin: 0;
+    margin-top: 53px;
+  }
 }

@@ -1,12 +1,29 @@
 .footer {
-  background-color: @content-color;
+  width: 100%;
   padding: 39px 20px 22px;
+
+  background-color: @content-color;
 }
 
 .footer__logo {
+  display: block;
   margin-bottom: 31px;
 }
 
 .footer__list {
   .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 150px;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
 }
