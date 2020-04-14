@@ -1,16 +1,11 @@
 .guide {
-  width: 100%;
   text-align: left;
-}
-
-.guide__wrapper {
-  margin: 0 20px;
 }
 
 .guide__title {
   .main-title();
 
-  margin: 32px 0 35px;
+  margin-bottom: 35px;
 }
 
 .guide__list {
@@ -58,11 +53,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .guide__wrapper {
-    margin: 0 30px;
-    margin-top: 51px - 20px;
-  }
-
   .guide__title {
     margin-left: 3px;
     margin-bottom: 63px;
@@ -75,12 +65,9 @@
   }
 
   .guide__item {
-    flex-grow: 1;
-
-    width: 201px;
-    height: 228px;
-    margin-right: 10%;
+    width: 35%;
     padding: 37px + 80px 0 48px;
+    counter-reset: section;
 
     &::before {
       width: 80px;
@@ -99,28 +86,15 @@
       right: 0;
 
       color: @content-color;
-    }
 
-    &--leaf::after {
-      content: "1";
-    }
-
-    &--powder::after {
-      content: "2";
-    }
-
-    &--dining::after {
-      content: "3";
-    }
-
-    &--clock::after {
-      content: "4";
+      counter-increment: section;
+      content: "counter(section)";
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .guide__wrapper {
-    margin: 0 110px;
+  .guide__item {
+    width: 20%;
   }
 }

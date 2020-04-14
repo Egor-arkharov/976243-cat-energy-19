@@ -1,22 +1,23 @@
-.main__title {
+.main__title-text {
   .main-title();
-
-  margin: 31px auto 0;
 }
 
 @media (min-width: @tablet-width) {
   .main__title {
-    .same-fs-lh(60px);
-
-    margin: 65px 33px 156px;
-
+    margin-top: 65px;
+    margin-bottom: 156px;
     text-align: left;
+    text-transform: none;
+  }
+
+  .main__title-text {
+    .same-fs-lh(60px);
     text-transform: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main__title {
-    margin: 83px 110px 156px;
+    margin-top: 83px;
   }
 }
