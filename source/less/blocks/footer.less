@@ -1,12 +1,31 @@
 .footer {
   background-color: @content-color;
-  padding: 39px 20px 22px;
+}
+
+.footer__wrapper {
+  padding-top: 39px;
+  padding-bottom: 22px;
 }
 
 .footer__logo {
+  display: block;
   margin-bottom: 31px;
 }
 
 .footer__list {
   .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 60px;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
 }

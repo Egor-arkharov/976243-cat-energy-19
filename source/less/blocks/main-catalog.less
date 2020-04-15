@@ -1,4 +1,22 @@
-.main-catalog__title {
-  .main-title();
-  margin: 31px auto 0;
+.main-catalog {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .main-catalog__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-catalog__item {
+    margin-bottom: 140px;
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-catalog__item {
+    width: 245px;
+  }
 }

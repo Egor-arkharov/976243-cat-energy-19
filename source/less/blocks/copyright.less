@@ -1,9 +1,13 @@
+.copyright {
+  padding-top: 22px;
+}
+
 .copyright__logo {
   .link();
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__logo-text {
@@ -11,4 +15,14 @@
 
   font-family: @alt-font;
   color: @text-color;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding: 0;
+  }
+
+  .copyright__logo-image {
+    margin-left: 23px;
+  }
 }

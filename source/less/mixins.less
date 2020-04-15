@@ -6,9 +6,6 @@
 .button() {
   display: block;
 
-  width: 280px;
-  min-height: 40px;
-
   font-size: @text-fs;
   line-height: @text-lh;
   text-decoration: none;
@@ -45,6 +42,11 @@
   line-height: @heading-m-lh;
   font-weight: @font-bold;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: @heading-h-fs-desktop;
+    line-height: @heading-h-lh-desktop;
+  }
 }
 
 .low-title() {
@@ -58,6 +60,22 @@
   text-align: left;
 
   color: @link-color;
+}
+
+.nav-title() {
+  .same-fs-lh(20px);
+  font-weight: @font-bold;
+  color: @link-color;
+
+  @media (min-width: @desktop-width) {
+    font-size: @nav-fs-tablet;
+    line-height: @nav-lh-tablet;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: @nav-fs-desktop;
+    line-height: @nav-lh-desktop;
+  }
 }
 
 .same-fs-lh(@px) {
@@ -79,4 +97,8 @@
   font-family: @alt-font;
   font-size: @text-l-fs;
   line-height: @text-l-lh;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-l-fs-tablet;
+  }
 }
