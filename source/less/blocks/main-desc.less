@@ -2,17 +2,23 @@
   margin-bottom: 22px;
 }
 
+.main-desc__wrapper {
+  padding: 0;
+}
+
 .main-desc__text {
   padding: 29px 15px 167px;
   position: relative;
+
+  color: @body-color;
+
+  z-index: 2;
 
   background-color: @brand-color;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: cover;
-
-  color: @body-color;
+  background-size: auto;
 
   &::after {
     content: "";
@@ -34,21 +40,20 @@
 
 .main-desc__title {
   .same-fs-lh(36px);
-
-  text-transform: none;
 }
 
 .main-desc__slogan {
   .same-fs-lh(14px);
+  text-transform: uppercase;
 
-  margin-top: 19px;
+  margin-top: 24px;
 }
 
 .main-desc__button {
-  .button();
+  .h-button();
 
   margin: 135px 20px 0;
-  padding: 14px 0 11px;
+  padding: 11px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -57,11 +62,11 @@
   }
 
   .main-desc__wrapper {
-    padding: 61px 238px 529px 120px - 30px;
+    padding: 58px 210px 520px 118px;
 
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: 10px bottom;
     background-size: contain;
   }
 
@@ -81,7 +86,7 @@
     .same-fs-lh(60px);
     text-transform: none;
 
-    margin-bottom: 33px;
+    margin-bottom: 41px;
   }
 
   .main-desc__slogan {
@@ -92,28 +97,27 @@
     width: 245px;
 
     margin: 0;
-    margin-top: 48px;
+    margin-top: 50px;
+    padding: 13px 0 16px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-desc {
-    margin-top: -60px - 53px;
+    margin-top: -130px;
 
     background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 70% 142px, right 0;
+    background-position: 63% 142px, right 0;
   }
 
   .main-desc__wrapper {
-    padding: 226px 500px 188px 193px;
+    padding: 240px 820px 188px 191px;
     background-image: none;
   }
 
   .main-desc__button {
-    .same-fs-lh(20px);
+    margin-top: 52px;
     padding: 17px 27px;
-
-    margin-top: 53px;
   }
 }

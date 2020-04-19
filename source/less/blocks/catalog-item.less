@@ -1,19 +1,16 @@
 .catalog-item {
   display: flex;
   flex-wrap: wrap;
+}
 
-  padding-top: 25px;
-  padding-bottom: 25px;
-
-  border-top: @border;
-
-  &:last-child {
-    border-bottom: @border;
-  }
+.catalog-item__img-wrapper {
+  width: 140px;
+  height: 144px;
 }
 
 .catalog-item__desc {
   flex-grow: 1;
+  margin-top: 21px;
 }
 
 .catalog-item__link {
@@ -30,13 +27,14 @@
 
   width: 100%;
 
-  margin-top: 18px;
+  margin-top: 11px;
 
   text-align: left;
   color: @text-color;
 }
 
-.catalog-item__field {
+.catalog-item__tr,
+.catalog-item__td {
   margin: 0;
   padding: 0;
 }
@@ -50,36 +48,42 @@
 
   width: 100%;
   margin: 0 auto;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  padding: 11px 0 9px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-item {
     flex-direction: column;
 
-    padding: 165px 39px 40px;
-
     background-color: @content-color;
     border: none;
 
-    text-align: center;
+    position: relative;
   }
 
   .catalog-item__img-wrapper {
     position: absolute;
-    margin-top: -230px;
-    margin-left: 44px;
+    bottom: 280px;
+    left: 50%;
   }
 
-  .catalog-item__img {
+  .catalog-item__img-wrapper--small {
     width: 161px;
     height: 172px;
+    margin-left: -161px / 2;
+  }
+
+  .catalog-item__img-wrapper--big {
+    width: 195px;
+    height: 208px;
+    margin-left: -195px / 2;
+  }
+
+  .catalog-item__desc {
+    margin-top: 0;
   }
 
   .catalog-item__title {
-    .same-fs-lh(20px);
-
     width: 130px;
     margin: 0 auto;
 
@@ -88,35 +92,27 @@
 
   .catalog-item__table {
     font-family: @alt-font;
-    .same-fs-lh(16px);
     text-transform: none;
 
-    margin-top: 28px;
+    margin-top: 20px;
 
     border-collapse: collapse;
   }
 
-  .catalog-item__table tr {
+  .catalog-item__tr {
     border-bottom: @border;
   }
 
-  .catalog-item__table td {
-    padding: 7px 0 5px;
+  .catalog-item__td {
+    padding: 7px 0;
   }
 
   .catalog-item__order {
-    .low-title();
     text-align: center;
     color: @body-color;
 
     padding-top: 13px;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     margin-top: 33px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .catalog-item__img-wrapper {
-    margin-left: 5px;
   }
 }
