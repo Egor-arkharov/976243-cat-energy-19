@@ -1,0 +1,55 @@
+.address__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 31px;
+  padding-bottom: 26px;
+  text-align: left;
+}
+
+.address__text {
+  width: 50%;
+  margin: 0;
+}
+
+.address__call {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.address__place {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.address__place-br2 {
+  display: none;
+}
+
+.address__map {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .address__wrapper {
+    padding: 69px 71px 62px;
+  }
+
+  .address__call {
+    font-size: 20px;
+    line-height: 25px;
+    width: 154px;
+  }
+
+  .address__place {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .address__place-br2 {
+    display: block;
+  }
+}
