@@ -1,5 +1,5 @@
 .stats {
-  padding: 33px 0 38px;
+  padding: 40px 0 38px;
   background-color: @content-color;
 }
 
@@ -11,20 +11,25 @@
 .stats__ex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
-  padding-top: 33px;
+  padding-top: 23px;
 }
 
 .stats__desc {
   .text();
   text-align: left;
+
   margin: 0;
-  margin-bottom: 44px;
+  margin-bottom: 26px;
+  padding-right: 1px;
 }
 
 .stats__list {
   .list-reset();
-  width: 50%;
+  width: 44%;
+  padding-top: 13px;
+  border: @border;
 }
 
 .stats__item-value {
@@ -33,51 +38,110 @@
 
 .stats__item-indicator {
   .same-fs-lh(12px);
+  display: block;
 
-  margin-top: 7px;
+  width: 96px;
+  padding: 0 10px;
+  margin: 8px 12px -15px;
+  background-color: @content-color;
   font-family: "Arial", sans-serif;
   text-transform: lowercase;
 }
 
 .stats__total {
-  .text();
+  font-size: @font-size-xs;
+  line-height: @line-height-l;
   font-weight: bold;
-  margin-top: 25px;
+  text-transform: uppercase;
+  margin-top: 33px;
+  margin-left: 45px;
 }
 
 .stats__media {
-  display: block;
-  padding-top: 44px;
+  padding-top: 24px;
 }
 
-.stats__img {
-  margin-bottom: 35px;
+.stats__img--after {
+  display: none;
 }
 
-.stats__slider-text {
+.stats__range-wrapper {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 55px;
+}
+
+.stats__range-text {
   .low-title();
+  font-family: @main-font;
+  background-color: @content-color;
+  border: none;
+}
+
+.stats__range-low {
+  margin: 0 19px;
+  width: 84px;
+  padding: 6px 9px;
+  border: @border;
+  border-radius: 6px;
+}
+
+.stats__range-scale {
+  width: 35px;
+  height: 6px;
+  background-color: @brand-color;
+  border-radius: 3px;
+}
+
+.stats__range-medium {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .stats {
-    padding-top: 51px;
+    margin-top: -27px;
+    padding-top: 43px;
     padding-bottom: 68px;
     background-color: @body-color;
     border-top: @border;
   }
 
   .stats__ex {
-    padding-top: 60px;
+    padding-top: 64px;
+  }
+
+  .stats__desc {
+    margin-bottom: 54px;
   }
 
   .stats__list {
-    width: 25%;
+    width: 23%;
+    margin-right: 40px;
+  }
+
+  .stats__item-value {
+    font-size: @font-size-alt;
+    line-height: @line-height-h;
+  }
+
+  .stats__item-indicator {
+    font-size: @font-size-xs;
+    line-height: @line-height-xs;
+
+    width: 150px;
+    margin: 11px 6px -5px;
   }
 
   .stats__total {
+    font-size: @font-size-l;
     text-align: right;
-    margin: 0;
+    margin-top: 12px;
     margin-left: auto;
+  }
+
+  .stats__total-price {
+    display: block;
   }
 
   .stats__media {
@@ -85,18 +149,59 @@
   }
 
   .stats__img {
+    height: 500px;
     margin-bottom: 21px;
+  }
+
+  .stats__range-wrapper {
+    margin-top: 24px;
+  }
+
+  .stats__range-low {
+    display: none;
+  }
+
+  .stats__range-medium {
+    display: block;
+  }
+
+  .stats__range-text {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      width: 100%;
+      height: 1px;
+
+      top: 28px;
+      left: 0;
+
+      border-bottom: @border;
+      border-style: dotted;
+    }
+
+    &:hover::after {
+      border-style: solid;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .stats {
-    margin-top: 90px;
-    padding-top: 0;
-    padding-bottom: 68px;
+    margin-top: 78px;
+    padding: 0;
 
     border: none;
-    background-color: @content-color;
+  }
+
+  .stats__desc {
+    margin-bottom: 67px;
+  }
+
+  .stats__list {
+    width: 37%;
   }
 
   .stats__title {
@@ -106,21 +211,44 @@
 
   .stats__wrapper {
     display: flex;
+    padding-bottom: 76px;
+    background-color: @content-color;
   }
 
   .stats__ex {
-    padding-top: 76px;
+    padding-top: 79px;
     width: 36%;
+    align-content: flex-start;
+    justify-content: flex-start;
   }
 
   .stats__total {
     margin: 0;
+    margin-top: 60px;
     margin-bottom: auto;
+    font-weight: normal;
 
     text-transform: uppercase;
   }
 
   .stats__media {
     width: 64%;
+    padding: 0;
+    margin-top: -200px;
+  }
+
+  .stats__total-price {
+    display: inline;
+    margin-left: 60px;
+  }
+
+  .stats__range-wrapper {
+    margin-top: 47px;
+    justify-content: flex-end;
+  }
+
+  .stats__range-medium {
+    width: 428px;
+    margin: 0 23px;
   }
 }

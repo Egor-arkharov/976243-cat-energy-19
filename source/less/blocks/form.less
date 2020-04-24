@@ -1,0 +1,30 @@
+.form__item {
+  border: none;
+}
+
+.form__title {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.form__title::before,
+.form__title::after {
+  position: absolute;
+  content: "";
+
+  width: 100%;
+  height: 1px;
+
+  top: 50%;
+
+  background-color: @brand-color;
+}
+
+.form__title::before {
+  right: 100%;
+}
+
+.form__list {
+  .list-reset();
+}

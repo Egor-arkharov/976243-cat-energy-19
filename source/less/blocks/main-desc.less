@@ -72,7 +72,7 @@
   }
 
   .main-desc__wrapper {
-    padding: 58px 210px 520px 118px;
+    padding: 74px 210px 520px 118px;
 
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-repeat: no-repeat;
@@ -119,20 +119,20 @@
 
 @media (min-width: @desktop-width) {
   .main-desc {
-    margin-top: -130px;
+    margin-top: -99px;
 
-    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg"), linear-gradient(to left, @brand-color, @body-color 800px);
+    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, @body-color, @body-color 720px, @brand-color 720px);
     background-repeat: no-repeat;
-    background-position: 63% 200px, 720px 0;
+    background-position: 63% 200px, 720px 0, 0;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-can-desktop@2x.png"), url("../img/index-background-desktop@2x.jpg");
+      background-image: url("../img/index-can-desktop@2x.png"), url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, @body-color, @body-color 720px, @brand-color 720px);
       background-size: 552px auto, 720px auto;
     }
   }
 
   .main-desc__wrapper {
-    padding: 240px 820px 170px 191px;
+    padding: 223px 820px 186px 191px;
     background-image: none;
   }
 
