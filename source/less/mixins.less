@@ -16,6 +16,10 @@
   color: @body-color;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: @hover-btn-color;
+  }
 }
 
 .h-button() {
@@ -31,6 +35,10 @@
   color: @body-color;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: @hover-btn-color;
+  }
 
   @media (min-width: @tablet-width) {
     .same-fs-lh(20px);
@@ -130,5 +138,29 @@
 
   @media (min-width: @tablet-width) {
     font-size: @font-size-s;
+  }
+}
+
+.cta-text() {
+  font-size: @font-size-s;
+  line-height: @line-height-l;
+  text-transform: uppercase;
+  color: @link-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @font-size-l;
+    line-height: @line-height-alt;
+  }
+}
+
+.address() {
+  font-family: @alt-font;
+  font-size: @font-size-xs;
+  line-height: @line-height-l;
+  color: @text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @font-size-s;
+    line-height: @line-height-l;
   }
 }

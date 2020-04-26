@@ -10,7 +10,13 @@
 <body>
   <header class="header">
     <div class="header__wrapper center">
-      <a href="#" class="header__logo" aria-label="Логотип Cat Energy"></a>
+      <a href="#" class="header__logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="header__logo-img" src="img/logo-mobile.svg" alt="Логотип Cat Energy">
+        </picture>
+      </a>
       <button class="header__toggle-nav" type="button" aria-label="Открыть меню"></button>
       <nav class="header__nav site-nav">
         <ul class="site-nav__list">
@@ -66,6 +72,63 @@
         </ul>
       </div>
     </section>
+
+    <section class="stats">
+      <div class="stats__title center">
+        <h2 class="stats__text">Живой пример</h2>
+      </div>
+      <div class="stats__wrapper center">
+        <div class="stats__ex">
+          <p class="stats__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <ul class="stats__list">
+            <li class="stats__item stats__item-value">5 кг</li>
+            <li class="stats__item stats__item-indicator">Cнижение веса</li>
+          </ul>
+          <ul class="stats__list">
+            <li class="stats__item stats__item-value">60 дней</li>
+            <li class="stats__item stats__item-indicator">Затрачено времени</li>
+          </ul>
+          <p class="stats__total">Затраты на питание: <span class="stats__total-price">15 000 руб.</span></p>
+        </div>
+        <div class="stats__media">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+            <img class="stats__img stats__img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Кот до похудания" width="320" height="240">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@1x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+            <img class="stats__img stats__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот после похудания" width="320" height="240">
+          </picture>
+          <div class="stats__range-wrapper">
+            <button type="button" class="stats__range-text">Было</button>
+
+            <div class="stats__range-low">
+              <div class="stats__range-scale">
+              </div>
+            </div>
+
+            <input class="stats__range-medium" type="range">
+
+            <button type="button" class="stats__range-text">Стало</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="address">
+      <h2 class="visually-hidden">Адрес компании для дилеров</h2>
+      <div class="address__wrapper center">
+        <p class="address__text address__call">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="address__text address__place">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+        <img class="address__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@1x.png 2x" alt="Карта офиса по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург" width="320" height="362">
+      </picture>
+      </section>
   </main>
 
   <footer class="footer">
@@ -89,9 +152,7 @@
       <div class="footer__copyright copyright">
         <a href="#" class="copyright__logo">
           <p class="copyright__logo-text">HTML Academy</p>
-          <div class="copyright__logo-image-wrapper">
-            <img src="img/htmlacademy.svg" class="copyright__logo-image"  alt="Логотип HTML Academy" width="27" height="34">
-          </div>
+          <img src="img/htmlacademy.svg" class="copyright__logo-image"  alt="Логотип HTML Academy" width="27" height="34">
         </a>
       </div>
     </div>

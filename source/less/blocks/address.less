@@ -1,0 +1,60 @@
+.address__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 25px;
+  padding-bottom: 27px;
+  text-align: left;
+}
+
+.address__text {
+  width: 50%;
+  margin: 0;
+}
+
+.address__call {
+  .cta-text();
+}
+
+.address__place {
+  .address();
+}
+
+.address__place-br2 {
+  display: none;
+}
+
+.address__map {
+  width: 100%;
+  height: 362px;
+}
+
+@media (min-width: @tablet-width) {
+  .address {
+    position: relative;
+  }
+
+  .address__wrapper {
+    position: absolute;
+    padding: 69px 71px 62px;
+    width: 570px;
+
+    top: 92px;
+    left: 114px;
+
+    background-color: @content-color;
+  }
+
+  .address__call {
+    width: 154px;
+  }
+
+  .address__place {
+    text-align: right;
+    width: 30%;
+  }
+
+  .address__map {
+    height: 400px;
+  }
+}

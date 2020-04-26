@@ -12,11 +12,12 @@
   width: 191px;
   height: 39px;
   margin-bottom: 15px;
+}
 
-  background-image: url("../img/logo-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.header__logo-img {
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .header__toggle-nav {
@@ -52,12 +53,6 @@
   }
 
   .header__logo {
-    background-image: url("../img/logo-tablet.svg");
-    background-repeat: no-repeat;
-
-    width: 174px;
-    height: 59px;
-
     margin: 0;
   }
 }
@@ -72,9 +67,6 @@
   }
 
   .header__logo {
-    background-image: url("../img/logo-desktop.svg");
-
     width: 203px;
-    height: 60px;
   }
 }
