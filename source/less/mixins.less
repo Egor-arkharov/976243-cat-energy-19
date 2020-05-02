@@ -24,6 +24,7 @@
 
 .h-button() {
   display: block;
+  padding: 11px 0;
 
   font-size: @font-size-xs;
   line-height: @line-height-m;
@@ -162,5 +163,17 @@
   @media (min-width: @tablet-width) {
     font-size: @font-size-s;
     line-height: @line-height-l;
+  }
+}
+
+.form-content() {
+  font-family: @main-font;
+  font-size: @font-size-s;
+  line-height: @line-height-m;
+  text-transform: uppercase;
+  font-weight: @font-normal;
+
+  @media (min-width: @tablet-width) {
+    .same-fs-lh(20px);
   }
 }
