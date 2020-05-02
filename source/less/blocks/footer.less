@@ -14,17 +14,32 @@
 
   width: 128px;
   height: 24px;
-}
+  outline: none;
 
-.footer__logo-image {
   &:hover {
     opacity: 0.8;
   }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.footer__list {
-  .list-reset();
-}
+// .footer__logo-image {
+//   &:hover {
+//     opacity: 0.8;
+//   }
+
+//   &:active,
+//   &:focus {
+//     opacity: 0.3;
+//   }
+// }
+
+// .footer__list {
+//   .list-reset();
+// }
 
 @media (min-width: @tablet-width) {
   .footer__wrapper {

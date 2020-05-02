@@ -8,6 +8,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  outline: none;
+
+  &:hover .copyright__logo-image-wrapper {
+    color: @brand-color;
+  }
+
+  &:focus .copyright__logo-text,
+  &:focus .copyright__logo-image-wrapper {
+    opacity: 0.3;
+  }
+
+  &:focus .copyright__logo-image-wrapper {
+    color: @brand-color;
+  }
 }
 
 .copyright__logo-text {
@@ -21,6 +35,11 @@
 .copyright__logo-image-wrapper {
   width: 27px;
   height: 34px;
+  color: @social-color;
+}
+
+.copyright__logo-image {
+  height: inherit;
 }
 
 @media (min-width: @tablet-width) {

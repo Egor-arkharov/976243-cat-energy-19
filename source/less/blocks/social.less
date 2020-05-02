@@ -17,17 +17,16 @@
 .social__link {
   .link();
   display: block;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  color: @social-color;
+  outline: none;
 
   &--vkontakte {
-    background-image: url("../img/icon-vk.svg");
     width: 22px;
     height: 12px;
   }
 
   &--instagram {
-    background-image: url("../img/icon-insta.svg");
     width: 17px;
     height: 17px;
 
@@ -36,10 +35,24 @@
   }
 
   &--facebook {
-    background-image: url("../img/icon-fb.svg");
     width: 10px;
     height: 19px;
   }
+
+  &:hover {
+    color: @brand-color;
+  }
+
+  &:focus,
+  &:active {
+    color: @brand-color;
+    opacity: 0.3;
+  }
+}
+
+.social__link-icon {
+  position: absolute;
+  height: inherit;
 }
 
 @media (min-width: @tablet-width) {
