@@ -27,6 +27,10 @@
   &:hover {
     opacity: 0.6;
   }
+
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -75,5 +79,13 @@
 @media (min-width: @desktop-width) {
   .site-nav {
     width: 39%;
+  }
+
+  .site-nav__link--white {
+    color: @body-color;
+  }
+
+  .site-nav__item--active-white::after {
+    background-color: @body-color;
   }
 }

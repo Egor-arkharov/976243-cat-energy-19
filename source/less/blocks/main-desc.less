@@ -1,6 +1,4 @@
 .main-desc {
-  padding-bottom: 22px;
-
   position: relative;
 
   background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, @brand-color, @body-color 305px);
@@ -38,11 +36,12 @@
 }
 
 .main-desc__wrapper {
-  padding: 0;
+  margin-top: -1px;
+  padding-bottom: 22px;
 }
 
 .main-desc__text {
-  padding: 29px 15px 167px;
+  padding: 27px 15px 167px;
 
   color: @body-color;
 }
@@ -54,22 +53,25 @@
 .main-desc__slogan {
   .same-fs-lh(14px);
 
-  margin-top: 24px;
+  margin-top: 25px;
   text-transform: uppercase;
 }
 
 .main-desc__button {
   .h-button();
-  margin: 135px 20px 0;
+
+  margin-top: 135px;
+
+  &:focus {
+    color: rgba(@body-color, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .main-desc {
-    padding: 0;
-
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 10px bottom;
+    background-position: 30px bottom;
     background-size: contain;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -83,7 +85,8 @@
   }
 
   .main-desc__wrapper {
-    padding: 74px 210px 520px 118px;
+    margin: 0;
+    padding: 55px 210px 529px 119px;
   }
 
   .main-desc__text {
@@ -107,14 +110,14 @@
     width: 245px;
 
     margin: 0;
-    margin-top: 50px;
-    padding: 13px 0 16px;
+    margin-top: 48px;
+    padding: 16px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-desc {
-    margin-top: -98px;
+    margin-top: -116px;
 
     background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, @body-color, @body-color 720px, @brand-color 720px);
     background-repeat: no-repeat;
