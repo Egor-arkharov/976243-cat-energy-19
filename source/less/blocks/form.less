@@ -1,5 +1,7 @@
 .form {
   padding-bottom: 34px;
+
+  overflow-x: hidden;
 }
 
 .form__list {
@@ -16,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 .form__label,
@@ -33,13 +35,27 @@
 
 .form__input {
   margin: 0;
-  margin-left: 15px;
+  margin-left: 14px;
   padding: 12px 16px;
 
   width: 100%;
   border: @border;
+  border-color: rgba(@border-color, 0.5);
 
   color: @text-color;
+  outline: none;
+
+  &:hover {
+    border-color: @border-color;
+  }
+
+  &:active {
+    border: solid 2px @text-color;
+  }
+
+  &:invalid {
+    border: solid 2px @error-color;
+  }
 }
 
 .form__personal {
@@ -49,8 +65,7 @@
 .form__type {
   position: relative;
 
-  padding-top: 21px;
-  padding-bottom: 6px;
+  padding: 27px 30px 2px;
 
   &::before,
   &::after {
@@ -73,6 +88,10 @@
   }
 }
 
+.form__type .form__item {
+  margin-bottom: 25px;
+}
+
 .form__label-check {
   flex-grow: 1;
   margin-left: 16px;
@@ -92,22 +111,26 @@
   color: @link-color;
 }
 
-// .form__title::before,
-// .form__title::after {
-//   position: absolute;
-//   content: "";
+.form__title::before,
+.form__title::after {
+  position: absolute;
+  content: "";
 
-//   width: 100%;
-//   height: 1px;
+  width: 100vw;
+  height: 3px;
 
-//   top: 50%;
+  top: 50%;
 
-//   background-color: @brand-color;
-// }
+  background-color: @brand-color;
+}
 
-// .form__title::before {
-//   right: 100%;
-// }
+.form__title::before {
+  right: calc(100% + 30px);
+}
+
+.form__title::after {
+  left: calc(100% + 30px);
+}
 
 .form-contact__title {
   margin-top: 28px;
@@ -115,20 +138,20 @@
 }
 
 .form-comment__title {
-  margin-top: 15px;
+  margin-top: 13px;
   margin-bottom: 35px;
 }
 
 .form-more__title {
   margin-top: 23px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .form__textarea {
   width: 100%;
   min-height: 150px;
 
-  padding: 15px 13px;
+  padding: 12px 13px 15px 14px;
 
   color: @text-color;
   border: @border;
@@ -154,10 +177,22 @@
   width: 30px;
   height: 30px;
 
-  top: -3px;
-  left: -35px;
+  top: -6px;
+  left: -46px;
   border: @border;
   border-radius: 50px;
+
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.form__input-radio:hover + .form__type-checkbox {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.form__input-radio:focus + .form__type-checkbox,
+.form__input-radio:active + .form__type-checkbox {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+  border: solid 2px #68b738;
 }
 
 .form__input-radio:checked + .form__type-checkbox::before {
@@ -186,13 +221,32 @@
   clip: rect(0 0 0 0);
 }
 
+.form-more__list {
+  padding-left: 30px;
+}
+
+.form-more__item {
+  margin-bottom: 25px;
+
+  &:hover .form-more__checkbox {
+    border-color: @hover-checkbox-color;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .form-more__checkbox {
   position: absolute;
   width: 30px;
   height: 30px;
 
-  top: -3px;
-  left: -35px;
+  top: -5px;
+  left: -46px;
+
+  color: @brand-color;
   border: @border;
 }
 
@@ -215,13 +269,18 @@
   margin-left: -22px / 2;
 }
 
-.form-contact__input {
+
+.form-contact__item {
   position: relative;
 }
 
+.form-contact__input {
+  margin-left: 9px;
+}
+
 .form-contact__input-icon {
-  position: relative;
-  right: 25px;
+  position: absolute;
+  right: 15px;
   color: @alt-color;
 }
 
@@ -229,7 +288,7 @@
   color: @brand-color;
 }
 
-.form-contact__input:disabled + .form-contact__input-icon {
+.form-contact__input:invalid + .form-contact__input-icon {
   color: @error-color;
 }
 
@@ -237,13 +296,17 @@
   .button();
 
   width: 100%;
-  margin-top: 15px;
+  margin-top: 14px;
   padding-top: 13px;
   padding-bottom: 7px;
 
   font-family: @main-font;
 
   border: none;
+
+  &:focus {
+    color: rgba(@body-color, 0.3);
+  }
 }
 
 .form__note {
@@ -261,19 +324,24 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 13px 37px 72px 41px;
+    padding: 41px 37px 72px 41px;
   }
 
   .form__item {
     margin-bottom: 20px;
   }
 
+  .form__input {
+    padding: 9px 18px 11px;
+    margin-left: 18px;
+  }
+
   .form__personal {
-    padding-bottom: 72px;
+    padding-bottom: 52px;
   }
 
   .form__type {
-    padding: 25px 28px 11px;
+    padding: 34px 70px 1px;
 
     border: @border;
 
@@ -283,32 +351,69 @@
     }
   }
 
+  .form__type-checkbox {
+    width: 40px;
+    height: 40px;
+
+    top: -10px;
+    left: -59px;
+  }
+
+  .form__input-radio:checked + .form__type-checkbox::before {
+    width: 18px;
+    height: 18px;
+
+    margin-top: -9px;
+    margin-left: -9px;
+  }
+
+  .form__type .form__item {
+    margin-bottom: 33px;
+  }
+
+  .form__title {
+    .same-fs-lh(36px);
+  }
+
   .form-contact__title {
-    margin-top: 79px;
-    margin-bottom: 70px;
+    margin-top: 75px;
+    margin-bottom: 75px;
   }
 
   .form-comment__title {
-    margin-top: 69px;
-    margin-bottom: 71px;
+    margin-top: 46px;
+    margin-bottom: 76px;
   }
 
   .form-more__title {
-    margin-top: 69px;
-    margin-bottom: 53px;
+    margin-top: 59px;
+    margin-bottom: 68px;
   }
 
   .form__textarea {
+    padding: 13px 13px 15px 17px;
     min-height: 174px;
   }
 
   .form-more__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-left: 42px;
   }
 
   .form-more__item {
-    width: 50%;
+    width: 42%;
+    margin-bottom: 51px;
+  }
+
+  .form-more__checkbox {
+    width: 40px;
+    height: 40px;
+
+    top: -10px;
+    left: -58px;
   }
 
   .form__input-radio,
@@ -321,7 +426,7 @@
     display: flex;
     align-items: center;
 
-    margin-top: 54px;
+    margin-top: 14px;
   }
 
   .form__button {
@@ -329,6 +434,7 @@
     width: 283px;
 
     font-size: @font-size-l;
+    padding-bottom: 19px;
   }
 
   .form__note {
@@ -342,8 +448,8 @@
 @media (min-width: @desktop-width) {
   .form {
     padding: 0;
-    padding-top: 35px;
-    padding-bottom: 90px;
+    padding-top: 41px;
+    padding-bottom: 81px;
   }
 
   .form__basic {
@@ -353,7 +459,7 @@
   }
 
   .form__item {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   .form__personal {
@@ -364,7 +470,7 @@
   .form__type {
     width: 50%;
     margin-left: 80px;
-    padding: 25px 28px 30px;
+    padding: 32px 76px 3px;
   }
 
   .form__title {
@@ -372,8 +478,8 @@
   }
 
   .form-contact__title {
-    margin-top: 42px;
-    margin-bottom: 73px;
+    margin-top: 49px;
+    margin-bottom: 75px;
   }
 
   .form-contact__list {
@@ -392,7 +498,7 @@
 
   .form-more__title {
     margin-top: 62px;
-    margin-bottom: 58px;
+    margin-bottom: 65px;
   }
 
   .form-more__list {
@@ -400,11 +506,11 @@
   }
 
   .form-more__item {
-    width: 25%;
+    width: 17%;
   }
 
   .form__footer {
-    margin-top: 48px;
+    margin-top: 51px;
   }
 
   .form__button {

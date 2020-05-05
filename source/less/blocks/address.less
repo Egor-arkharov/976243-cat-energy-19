@@ -20,10 +20,6 @@
   .address();
 }
 
-.address__place-br2 {
-  display: none;
-}
-
 .address__map-wrapper {
   position: relative;
 
@@ -31,7 +27,7 @@
     position: absolute;
     content: "";
 
-    background-image: url("../../img/map-pin.png");
+    background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -51,26 +47,17 @@
 .address__map {
   position: relative;
   width: 100%;
+  max-width: 320px;
   height: 362px;
-
-  &::before {
-    position: absolute;
-    content: "";
-
-    background-image: url("../../img/map-pin.png");
-    background-position: center;
-    background-size: contain;
-    width: 55px;
-    height: 53px;
-
-    top: 50%;
-    left: 50%;
-  }
 }
 
 @media (min-width: @tablet-width) {
   .address__call {
     width: 154px;
+  }
+
+  .address__wrapper {
+    padding: 71px 72px 50px;
   }
 
   .address__place {
@@ -88,7 +75,13 @@
   }
 
   .address__map {
+    max-width: 768px;
     height: 400px;
+  }
+
+  .address__place-city {
+    display: block;
+    margin-top: 20px;
   }
 }
 
@@ -117,5 +110,10 @@
       left: 1009px;
       margin: 0;
     }
+  }
+
+  .address__map {
+    max-width: 1440px;
+    height: 400px;
   }
 }
