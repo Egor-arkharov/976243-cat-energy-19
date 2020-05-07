@@ -79,7 +79,7 @@
   border: none;
 }
 
-.stats__range-low {
+.stats__range-mob {
   margin: 0 19px;
   width: 84px;
   padding: 6px 9px;
@@ -94,7 +94,7 @@
   border-radius: 3px;
 }
 
-.stats__range-medium {
+.stats__range-big {
   display: none;
 }
 
@@ -157,14 +157,84 @@
     margin-top: 22px;
   }
 
-  .stats__range-low {
+  .stats__range-mob,
+  .stats__range-scale {
     display: none;
   }
 
-  .stats__range-medium {
+  .stats__range-big {
     display: block;
     width: 428px;
     margin: 0 22px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .stats__range-big::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+
+    background: @range-color;
+    border-radius: 2.5px;
+  }
+
+  .stats__range-big::-webkit-slider-thumb {
+    appearance: none;
+
+    height: 34px;
+    width: 34px;
+    margin-top: -14px;
+
+    background-color: @brand-color;
+
+    border: 12.5px solid @body-color;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .stats__range-big::-moz-range-track {
+    width: 100%;
+    height: 6px;
+
+    background: @range-color;
+    border-radius: 2.5px;
+  }
+
+  .stats__range-big::-moz-range-thumb {
+    appearance: none;
+
+    height: 34px;
+    width: 34px;
+    margin-top: -14px;
+
+    background-color: @brand-color;
+
+    border: 12.5px solid @body-color;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .stats__range-big::-ms-track {
+    width: 100%;
+    height: 6px;
+
+    background: @range-color;
+    border-radius: 2.5px;
+  }
+
+  .stats__range-big::-ms-fill-lower {
+    appearance: none;
+
+    height: 34px;
+    width: 34px;
+    margin-top: -14px;
+
+    background-color: @brand-color;
+
+    border: 12.5px solid @body-color;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   }
 
   .stats__range-text {
@@ -257,7 +327,7 @@
     justify-content: flex-end;
   }
 
-  .stats__range-medium {
+  .stats__range-big {
     width: 428px;
     margin: 0 23px;
   }

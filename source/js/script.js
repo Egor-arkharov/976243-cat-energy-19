@@ -26,3 +26,11 @@ rangeAfter.addEventListener('click', function() {
   imgBefore.classList.add('visually-hidden');
   imgAfter.classList.remove('visually-hidden');
 });
+
+// ymaps.ready(init);
+// function init(){
+//     var myMap = new ymaps.Map("map", {
+//         center: [59.938979, 30.319472],
+//         zoom: 17
+//     });
+// }
