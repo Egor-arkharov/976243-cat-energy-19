@@ -95,6 +95,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    counter-reset: section;
   }
 
   .guide__item {
@@ -109,6 +111,8 @@
 
     &::after {
       position: absolute;
+      counter-increment: section;
+      content: counters(section, "");
 
       font-family: @main-font;
       font-size: 281px;
@@ -121,22 +125,6 @@
       color: @content-color;
 
       z-index: -1;
-    }
-
-    &--leaf::after {
-      content: "1";
-    }
-
-    &--powder::after {
-      content: "2";
-    }
-
-    &--dining::after {
-      content: "3";
-    }
-
-    &--clock::after {
-      content: "4";
     }
   }
 }
