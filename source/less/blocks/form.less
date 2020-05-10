@@ -52,10 +52,10 @@
   &:active {
     border: solid 2px @text-color;
   }
+}
 
-  &:invalid {
-    border: solid 2px @error-color;
-  }
+.form__input:invalid:not(:placeholder-shown) {
+  border: solid 2px @error-color;
 }
 
 .form__personal {
@@ -288,7 +288,7 @@
   color: @brand-color;
 }
 
-.form-contact__input:invalid + .form-contact__input-icon {
+.form-contact__input:invalid:not(:placeholder-shown) + .form-contact__input-icon {
   color: @error-color;
 }
 
