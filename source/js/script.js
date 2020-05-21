@@ -1,10 +1,10 @@
 var header = document.querySelector('.header');
 var toggleNav = document.querySelector('.header__toggle-nav');
 
-var rangeBefore = document.querySelector('.stats__range--before');
-var rangeAfter = document.querySelector('.stats__range--after');
-var imgBefore = document.querySelector('.stats__img--before');
-var imgAfter = document.querySelector('.stats__img--after');
+var rangeBefore = document.querySelector('.stats__range-button--before');
+var rangeAfter = document.querySelector('.stats__range-button--after');
+var imgBefore = document.querySelector('.stats__img-item--before');
+var imgAfter = document.querySelector('.stats__img-item--after');
 
 header.classList.remove('header--nojs');
 
@@ -26,11 +26,3 @@ rangeAfter.addEventListener('click', function() {
   imgBefore.classList.add('visually-hidden');
   imgAfter.classList.remove('visually-hidden');
 });
-
-// ymaps.ready(init);
-// function init(){
-//     var myMap = new ymaps.Map("map", {
-//         center: [59.938979, 30.319472],
-//         zoom: 17
-//     });
-// }

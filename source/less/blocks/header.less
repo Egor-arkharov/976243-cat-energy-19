@@ -45,9 +45,7 @@
   &:focus {
     opacity: 0.6;
   }
-}
 
-.header__logo-img {
   &:hover {
     opacity: 0.8;
   }
@@ -55,6 +53,10 @@
   &:active {
     opacity: 0.6;
   }
+}
+
+.header__logo-img {
+  cursor: pointer;
 }
 
 .header__toggle-nav {
@@ -78,6 +80,11 @@
 @media (min-width: @tablet-width) {
   .header__wrapper {
     padding-top: 23px;
+  }
+
+  .header__logo {
+    width: 174px;
+    height: 59px;
   }
 
   .header__toggle-nav {

@@ -1,12 +1,10 @@
-.address {
-  padding: 0;
-}
 
 .address__wrapper {
   display: flex;
   justify-content: space-between;
 
-  padding: 25px 20px 27px;
+  padding-top: 25px;
+  padding-bottom: 27px;
   text-align: left;
 }
 
@@ -26,7 +24,6 @@
 .address__map {
   position: relative;
   width: 100%;
-  max-width: 320px;
   height: 362px;
 
   &::before {
@@ -56,7 +53,7 @@
 
 @media (min-width: @tablet-width) {
   .address__wrapper {
-    padding: 25px 71px 57px;
+    padding: 55px 71px 57px;
   }
 
   .address__call {
@@ -69,7 +66,6 @@
   }
 
   .address__map {
-    max-width: 768px;
     height: 400px;
 
     &::before {
@@ -97,7 +93,8 @@
 
   .address__wrapper {
     position: absolute;
-    padding: 69px 70px 55px 72px;
+    padding-top: 69px;
+    padding-bottom: 55px;
     width: 570px;
 
     top: 92px;
@@ -110,6 +107,7 @@
 
   .address__place {
     text-align: left;
+    margin-right: 50px;
   }
 
   .address__place-city {
@@ -117,7 +115,6 @@
   }
 
   .address__map {
-    max-width: 1440px;
     height: 400px;
 
     &::before {
