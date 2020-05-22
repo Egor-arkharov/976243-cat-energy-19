@@ -140,7 +140,7 @@
     background-color: @body-color;
 
     width: 150px;
-    margin: 11px 6px -5px;
+    margin: 17px 6px -5px;
   }
 
   .stats__total {
@@ -265,19 +265,20 @@
   }
 
   .stats__range-big::-moz-range-track {
-    width: 100%;
+    width: 428px;
     height: 6px;
-
     background: @range-color;
     border-radius: 2.5px;
+    background: @range-color;
+
+    border-color: transparent;
+    color: transparent;
   }
 
   .stats__range-big::-moz-range-thumb {
     appearance: none;
-
-    height: 34px;
-    width: 34px;
-    margin-top: -14px;
+    height: 10px;
+    width: 10px;
 
     background-color: @brand-color;
 
@@ -287,19 +288,30 @@
   }
 
   .stats__range-big::-ms-track {
-    width: 100%;
+    width: 428px;
     height: 6px;
-
     background: @range-color;
     border-radius: 2.5px;
+    background: @range-color;
+
+    border-color: transparent;
+    color: transparent;
   }
 
   .stats__range-big::-ms-fill-lower {
     appearance: none;
+    background: @range-color;
+  }
 
-    height: 34px;
-    width: 34px;
-    margin-top: -14px;
+  .stats__range-big::-ms-fill-upper {
+    appearance: none;
+    background: @range-color;
+  }
+
+  .stats__range-big::-ms-thumb {
+    appearance: none;
+    height: 10px;
+    width: 10px;
 
     background-color: @brand-color;
 
