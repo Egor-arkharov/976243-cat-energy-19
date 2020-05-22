@@ -191,6 +191,10 @@
   clip: rect(0 0 0 0);
 }
 
+.form__input-radio:focus + .form__type-checkbox {
+  opacity: 0.3;
+}
+
 .form__type-checkbox {
   position: absolute;
   width: 30px;
@@ -217,10 +221,6 @@
   border-radius: 50px;
 
   background-color: @brand-color;
-}
-
-.form__input-radio:focus + .form-more__checkbox {
-  opacity: 0.3;
 }
 
 .form__input-checkbox {
@@ -306,7 +306,7 @@
   .button();
 
   width: 100%;
-  margin-top: 14px;
+  margin-top: 12px;
   padding-top: 13px;
   padding-bottom: 7px;
 
@@ -334,7 +334,7 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 41px 37px 80px 41px;
+    padding: 41px 37px 72px 41px;
   }
 
   .form__item {
@@ -464,7 +464,7 @@
     display: flex;
     align-items: center;
 
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .form__button {
@@ -565,7 +565,7 @@
   }
 
   .form__footer {
-    margin-top: 51px;
+    margin-top: 53px;
   }
 
   .form__button {

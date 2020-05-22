@@ -28,7 +28,7 @@
   width: 100vw;
   height: 3px;
 
-  top: 21px;
+  top: 12px;
 
   background-color: @brand-color;
 }
@@ -38,7 +38,7 @@
 }
 
 .add-catalog__title::after {
-  left: calc(100% + 36px);
+  left: calc(100% + 22px);
 }
 
 .add-catalog__list {
@@ -122,7 +122,7 @@
 @media (min-width: @tablet-width) {
   .add-catalog {
     margin-top: -100px;
-    padding-bottom: 71px;
+    padding-bottom: 77px;
   }
 
   .add-catalog__title {
@@ -131,6 +131,15 @@
 
     font-size: 36px;
     line-height: 36px;
+
+    &::before,
+    &::after {
+      top: 21px;
+    }
+
+    &::after {
+      left: calc(100% + 35px);
+    }
   }
 
   .add-catalog__item {
