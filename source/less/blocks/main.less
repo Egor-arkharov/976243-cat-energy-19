@@ -21,15 +21,27 @@
 .main__form {
   text-align: left;
   text-transform: uppercase;
+
+  overflow-x: hidden;
 }
 
 .main-catalog {
   padding-top: 3px;
 }
 
+.main__button {
+  .button();
+  width: 100%;
+  padding: 11px 0 9px;
+
+  &:focus {
+    color: rgba(@body-color, 0.3);
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main__title-wrapper {
-    padding-top: 55px;
+    padding-top: 40px;
   }
 
   .main__title {
@@ -41,11 +53,19 @@
     line-height: 30px;
     margin: 55px 280px 0 41px;
   }
+
+  .main__button {
+    padding-top: 13px;
+    padding-bottom: 8px;
+
+    text-align: center;
+    color: @body-color;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main__title-wrapper {
-    padding-top: 72px;
+    padding-top: 59px;
   }
 
   .main__title-text {
