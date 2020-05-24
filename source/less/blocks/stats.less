@@ -264,6 +264,11 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   }
 
+  .stats__range-big:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 2px @brand-color;
+  }
+
+
   .stats__range-big::-moz-range-track {
     width: 428px;
     height: 6px;
@@ -284,6 +289,10 @@
     border: 12.5px solid @body-color;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .stats__range-big:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 2px @brand-color;
   }
 
   .stats__range-big::-ms-track {
@@ -318,9 +327,14 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   }
 
+  .stats__range-big:focus::-ms-thumb {
+    box-shadow: 0 0 0 2px @brand-color;
+  }
+
   .stats__range-button {
     position: relative;
     background: none;
+    cursor: pointer;
 
     &::after {
       content: "";
@@ -366,6 +380,7 @@
   }
 
   .stats__item-indicator {
+    margin-top: 11px;
     background-color: @content-color;
   }
 
@@ -389,7 +404,7 @@
 
   .stats__total {
     margin: 0;
-    margin-top: 60px;
+    margin-top: 59px;
     margin-bottom: auto;
     font-weight: normal;
 
