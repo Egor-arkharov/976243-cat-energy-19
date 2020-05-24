@@ -48,12 +48,12 @@
   }
 
   &:active {
-    border: solid 2px @text-color;
+    border: solid 1px @text-color;
   }
 }
 
 .form__input:invalid:not(:placeholder-shown) {
-  border: solid 2px @error-color;
+  border: solid 1px @error-color;
 }
 
 .form__basic {
@@ -97,6 +97,7 @@
 .form__label-check {
   flex-grow: 1;
   margin-left: 16px;
+  white-space: normal;
 }
 
 .form__legend {
@@ -190,6 +191,10 @@
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+}
+
+.form__input-radio:hover + .form__type-checkbox {
+  border: 1px solid @hover-checkbox-color;
 }
 
 .form__input-radio:focus + .form__type-checkbox {
@@ -423,6 +428,11 @@
 
   .form-comment__title {
     margin-bottom: 76px;
+
+    &::after,
+    &::before {
+      top: 30px;
+    }
   }
 
   .form-more__title {
