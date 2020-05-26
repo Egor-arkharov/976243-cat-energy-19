@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Каталог продукции — Cat Energy</title>
   <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=d02cfe69-13f6-4e78-95a4-dcc79a272da1&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
@@ -428,6 +430,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/picturefill.min.js" async></script>
   <script>
     ymaps.ready(init);
     function init(){

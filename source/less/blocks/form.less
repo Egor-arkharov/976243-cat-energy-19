@@ -193,14 +193,6 @@
   clip: rect(0 0 0 0);
 }
 
-.form__input-radio:hover + .form__type-checkbox {
-  border: 1px solid @hover-checkbox-color;
-}
-
-.form__input-radio:focus + .form__type-checkbox {
-  opacity: 0.3;
-}
-
 .form__type-checkbox {
   position: absolute;
   width: 30px;
@@ -210,6 +202,14 @@
   left: -46px;
   border: @border;
   border-radius: 50px;
+}
+
+.form__input-radio:hover + .form__type-checkbox {
+  border: 1px solid @hover-checkbox-color;
+}
+
+.form__input-radio:focus + .form__type-checkbox {
+  opacity: 0.3;
 }
 
 .form__input-radio:checked + .form__type-checkbox::before {
